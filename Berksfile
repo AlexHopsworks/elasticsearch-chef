@@ -5,8 +5,8 @@ metadata
 
 cookbook 'java'
 
-cookbook 'kagent', github: "hopshadoop/kagent-chef", branch: "master"
-cookbook 'ndb', github: "hopshadoop/ndb-chef", branch: "master"
+cookbook 'kagent', github: "AlexHopsworks/kagent-chef", branch: "aegis"
+cookbook 'ndb', github: "AlexHopsworks/ndb-chef", branch: "aegis"
 
 cookbook 'ulimit2', '~> 0.2.0'
 cookbook 'elasticsearch', '~> 2.5.0'
