@@ -21,7 +21,8 @@ end
 
 Chef::Log.info "Using systemd (1): #{node.elastic.systemd}"
 
-service_name = "elasticsearch-#{node.elastic.node_name}"
+#service_name = "elasticsearch-#{node.elastic.node_name}"
+service_name = "elasticsearch"
 pid_file = "/tmp/elasticsearch.pid"
 
 case node.platform_family
@@ -166,7 +167,7 @@ if node.kagent.enabled == "true"
 # Note, the service below cannot have a '-' in its name, so we call it just
 # "elasticsearch". The service_name will be the name of the init.d/systemd script.
   kagent_config service_name do
-    service "elasticsearch"
+    service "ELK"
     log_file "#{node.elastic.home_dir}/logs/#{node.elastic.cluster_name}.log"
   end
 end
