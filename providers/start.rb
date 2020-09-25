@@ -456,8 +456,9 @@ action :run do
         }
       }
     }'
+  end
 
-    elastic_http 'elastic-install-ml-index' do
+  elastic_http 'elastic-install-ml-index' do
     action :put
     url "#{new_resource.elastic_url}/#{node['elastic']['epipe']['ml_index']}"
     user new_resource.user
