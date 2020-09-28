@@ -511,6 +511,10 @@ action :run do
           "r_create_timestamp":{
             "type":"keyword"
           },
+          "xattr":{
+            "type":"nested",
+            "dynamic":true
+          },
           "xattr_prov":{
             "type":"nested",
             "dynamic":true
